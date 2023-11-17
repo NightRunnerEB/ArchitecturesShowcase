@@ -5,4 +5,14 @@
 //  Created by Евгений Бухарев on 17.11.2023.
 //
 
-import Foundation
+protocol RoutingLogic {
+    func goToStart()
+}
+
+final class Router: RoutingLogic {
+    weak var vc: CSViewController?
+    
+    func goToStart() {
+        vc?.present(MVCViewController(), animated: false)
+    }
+}

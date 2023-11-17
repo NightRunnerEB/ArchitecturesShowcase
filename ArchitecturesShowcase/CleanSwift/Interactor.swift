@@ -1,5 +1,5 @@
 //
-//  Interctor.swift
+//  Interactor.swift
 //  ArchitecturesShowcase
 //
 //  Created by Grigory Sosnovskiy on 17.11.2023.
@@ -11,10 +11,10 @@ protocol BusinessLogic {
     func loadStart()
 }
 
-final class Interctor {
-    var presenter: Presenter
+final class Interactor: BusinessLogic {
+    var presenter: PresentationLogic
     
-    init(presenter: Presenter) {
+    init(presenter: PresentationLogic) {
         self.presenter = presenter
     }
     
